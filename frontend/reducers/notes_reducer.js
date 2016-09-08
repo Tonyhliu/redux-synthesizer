@@ -1,8 +1,11 @@
 import NotesConstants from '../actions/note_actions';
 import NOTE_NAMES from '../util/tones';
 
-const validKeys = ['a', 's', 'd', 'f']; // stores synthesizer's keyboard keys
-const keyMap = {} // maps keyboard keys to notes
+// stores synthesizer's keyboard keys
+const validKeys = ['a', 's', 'd', 'f'];
+
+// maps keyboard keys to notes
+const keyMap = {} 
 validKeys.forEach((key, i) => {
   keyMap[key] = NOTE_NAMES[i];
 });
