@@ -1,11 +1,11 @@
-import NotesConstants from '../actions/note_actions';
-import NOTE_NAMES from '../util/tones';
+import { NotesConstants } from '../actions/note_actions';
+import { NOTE_NAMES } from '../util/tones';
 
 // stores synthesizer's keyboard keys
 const validKeys = ['a', 's', 'd', 'f'];
 
 // maps keyboard keys to notes
-const keyMap = {} 
+const keyMap = {}
 validKeys.forEach((key, i) => {
   keyMap[key] = NOTE_NAMES[i];
 });
@@ -13,6 +13,7 @@ validKeys.forEach((key, i) => {
 const notes = (state = [], action) => {
   // convert key to note
   const note = keyMap[action.key];
+
   // check & see if note is in prev state
   const idx = state.indexOf(note);
 
