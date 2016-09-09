@@ -1,7 +1,10 @@
 import React from 'react';
+import SynthContainer from './synth/synth_container';
 
 const App = () => (
-    <div>Hi from app</div>
+    <div>
+      <SynthContainer />
+    </div>
 );
 
 export default App;
