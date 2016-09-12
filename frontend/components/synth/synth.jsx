@@ -1,23 +1,31 @@
-// import React from 'react';
-// import Note from '../../util/note';
-// import { TONES } from '../../util/tones';
-// import { NOTE_NAMES } from '../../util/tones';
+import React from 'react';
+import Note from '../../util/note';
+import { NOTE_NAMES, TONES } from '../../util/tones';
 
 // const Synth = () => (
 //   <div>Synth</div>
 // );
 
-class Synth extends React.component {
+window.note = Note;
+
+class Synth extends React.Component {
   constructor(props) {
     super(props);
-    this.notes = NOTE_NAMES.map(note => {
-      new Note(TONES[note]); // an array of the Note instances
-    })
+    let noteNames = NOTE_NAMES;
+    let tones = TONES;
+    this.notes = noteNames.map(note => {
+      new window.note(tones[note]); // an array of the Note instances
+    });
   }
 
-  
-
+  render() {
+    return(
+      <ul>
+        {this.notes}
+      </ul>
+    );
+  }
 }
 
 
-// export default Synth;
+export default Synth;

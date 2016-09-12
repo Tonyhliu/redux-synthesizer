@@ -1,4 +1,4 @@
-import { NotesConstants } from '../actions/note_actions';
+import { NotesConstants } from '../actions/notes_actions';
 import { NOTE_NAMES } from '../util/tones';
 
 // stores synthesizer's keyboard keys
