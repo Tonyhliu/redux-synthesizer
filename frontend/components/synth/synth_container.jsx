@@ -3,10 +3,12 @@ import Synth from './synth';
 import { keyPressed, keyReleased } from '../../actions/note_actions';
 
 // state is object
+// subscribe to state, to pass props to presentation layer (aka App component)
 const mapStateToProps = ({ notes }) => ({
   notes
 });
 
+// actions to dispatch (can use in app component)
 const mapDispatchToProps = dispatch => ({
   keyPressed: key => dispatch(keyPressed(key)),
   keyReleased: key => dispatch(keyReleased(key))
