@@ -2,7 +2,7 @@ import { NotesConstants } from '../actions/notes_actions';
 import { NOTE_NAMES } from '../util/tones';
 
 // stores synthesizer's keyboard keys
-const validKeys = ['a', 's', 'd', 'f'];
+const validKeys = ['a', 's', 'd', 'f', 'g'];
 
 // maps keyboard keys to notes
 const keyMap = {}
